@@ -21,34 +21,10 @@ const renderCountries = (data) => {
     }
     if (data.length > 1) {
         clearIntarface()
-        // const markup = data.map(({ name, flags }) => {
-        //     return `
-        //     <li>
-        //     <img src="${flags.svg}" width="25" class="country-preview">
-        //     <span>
-        //     ${name.official}</li>
-        //     </span>
-        //     `
-        // }).join('');
         refs.countryList.innerHTML = baseCountryTpl(data)
     }
     if (data.length === 1) {
         clearIntarface()
-        // const markup = data.map(({ name, capital, population, flags, languages }) => {
-        //     return `
-        //     <p>
-        //     <img src="${flags.svg}" width="30" class="country-preview">
-        //     <span class="country-name">
-        //     ${name.common}
-        //     </span>
-        //     </p>
-        //     <ul>
-        //     <li><span class="country-info">Capital:</span> ${capital}</li>
-        //     <li><span class="country-info">Population:</span> ${population}</li>
-        //     <li><span class="country-info">Languages:</span> ${Object.values(languages).map((language) => ` ${language}`)}</li>
-        //     </ul>
-        //     `
-        // }).join('');
         refs.countryInfo.innerHTML = fullCountryTpl(data)
     }
 
